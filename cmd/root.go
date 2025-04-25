@@ -4,8 +4,13 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/joaovictorsoars/pomogoro/cmd/app/start"
 	"github.com/spf13/cobra"
 )
+
+func init() {
+	rootCmd.AddCommand(start.StartCmd)
+}
 
 var rootCmd = &cobra.Command{
 	Use:   "pomogoro",
